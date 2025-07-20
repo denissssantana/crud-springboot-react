@@ -1,4 +1,4 @@
-package br.com.projeto.gerenciador_usuarios;
+package br.com.projeto.gerenciadorusuarios;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

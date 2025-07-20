@@ -1,4 +1,5 @@
 package br.com.projeto.gerenciadorusuarios.model;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 
@@ -21,7 +22,7 @@ import lombok.Data;
  */
 @Entity
 @Table(name = "usuarios")
-@Data
+/* @Data */
 public class Usuario {
 
     /**
@@ -54,6 +55,51 @@ public class Usuario {
     private String senha;
 
     @Column(nullable = false)
+    @JsonFormat(pattern="yyyy-MM-dd") // <--- ADICIONE ESTA LINHA
     private LocalDate dataNascimento;
+    
+    
+ 
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
+
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+     
 
 }
